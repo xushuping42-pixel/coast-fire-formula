@@ -3,8 +3,10 @@
 **Live calculator → https://coastfirelab.com**
 
 A reference implementation of Coast/Fat FIRE math that **subtracts Social Security** and
-prices the **pre-Medicare health insurance gap** as a separate discounted bridge — the two
-items most FIRE calculators leave out.
+prices the **pre-Medicare health insurance gap** as a separate discounted bridge. The
+most-linked Coast FIRE calculator (WalletBurst) has no Social Security input at all — its
+seven fields are age, retirement age, annual spend, invested assets, return, inflation and
+withdrawal rate.
 
 Zero dependencies, standard library only. Every number is a pure function of its
 arguments, so any figure published on the live calculator can be reproduced and checked
@@ -39,8 +41,10 @@ portfolio the reader does not need**.
 
 ## Why subtract Social Security
 
-Most FIRE calculators apply the withdrawal rate to the full spend and assume benefits are
-zero. For anyone retiring in their 40s or 50s that overshoots, because the portfolio only
+WalletBurst's calculator — the one most Coast FIRE articles link to — applies the
+withdrawal rate to the full annual spend. With no field for benefits, Social Security is
+implicitly zero, so the portfolio has to fund spending that benefits will eventually
+cover. For anyone retiring in their 40s or 50s that overshoots, because the portfolio only
 ever has to fund the slice of spending that benefits do not cover.
 
 The catch is timing, and it is why the two offsets are modelled differently. Benefits do
